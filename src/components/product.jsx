@@ -5,7 +5,7 @@ const Product = () => {
     return (
         <div className='product'>
             <div className="product-img-container">
-                <img src="https://picsum.photos/250/200" alt="Product Name" className="product-img" />
+                <img src="https://picsum.photos/250/200"  alt="Product Name" className="product-img" />
             </div>
             <div className="product-bottom-container">
                 <div className="product-info">
