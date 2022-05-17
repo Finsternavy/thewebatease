@@ -1,3 +1,11 @@
 .catalog{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 678px){
+    .catalog{
+        flex-direction: column;
+    }
 }
