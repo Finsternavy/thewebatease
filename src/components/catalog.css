@@ -1,5 +1,15 @@
 .catalog{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.catalog h2{
+    color: orange;
+}
+.catalog .products{
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;

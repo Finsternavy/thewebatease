@@ -1,43 +1,54 @@
-// add ten items (services) to sell. 
+
 let catalog = [
     {
         _id: "1",
-        price: "$1000",
-        title: "Custom Website Design",
+        price: "999.99",
+        title: "Custom Website",
         image: "websiteDesignServiceImg.jpg",
         discount: 0,
         category: "service"
     },
     {
         _id: "2",
-        price: "$80/m",
-        title: "Website Maintenance Subscription",
+        price: "49.99",
+        title: "Website Maintenance",
         image: "websitemaintenanceServiceImg.jpg",
         discount: 0,
         category: "service"
     },
     {
         _id: "3",
-        price: "80/hr",
-        title: "Website SEO",
+        price: "79.99",
+        title: "SEO",
         image: "webSEOImg.jpg",
         discount: 0,
         category: "service"
     },
     {
         _id: "4",
-        price: "$100/hr",
-        title: "Web Development Training",
-        image: "trainingServices.jpg",
+        price: "100.00",
+        title: "WebDev Training",
+        image: "trainingService.jpg",
         discount: 0,
         category: "service"
     },
     {
         _id: "5",
-        price: "$100",
+        price: "100.00",
         title: "Gift Card",
         image: "giftCard.jpg",
         discount: 0,
         category: "goods"
     },
 ]
+
+class DataService{
+    getCatalog(){
+        // Retrieve data from the actual server
+
+
+        return catalog;
+    }
+}
+
+export default DataService;
