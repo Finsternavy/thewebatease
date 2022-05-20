@@ -7,9 +7,9 @@ import './navbar.css';
 
 function Navbar(){
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <h1>Menu will be here</h1>
-        </div>
+        </nav>
     );
 }
 
