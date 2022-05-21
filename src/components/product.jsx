@@ -19,7 +19,8 @@ const Product = ({data}) => {
     let [subTotal, setSubTotal] = useState(data.price);
 
     const calcSubTotal = () => {
-        setSubTotal(Math.round((data.price * qty)* 100) / 100);
+        // setSubTotal(Math.round((data.price * qty) * 100) / 100);
+        setSubTotal((data.price * qty).toFixed(2));
     }
     
     useEffect(()=>{
