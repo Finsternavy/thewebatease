@@ -64,7 +64,7 @@
     transition: background-color .3s ease;
 }
 .product .add-to-cart-btn:hover{
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(120, 120, 120);
 }
 .product .add-to-cart-btn:active{
     background-color: rgb(50, 50, 50);

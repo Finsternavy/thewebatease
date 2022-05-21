@@ -24,7 +24,7 @@
     transition: background-color .3s ease;
 }
 .quantityPicker button:hover{
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(120, 120, 120);
 }
 .quantityPicker button:active{
     background-color: rgb(50, 50, 50);
