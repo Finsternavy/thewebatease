@@ -34,7 +34,10 @@
     color: white;
     text-decoration: none;
 }
-.navbar .links li a:hover,
-.navbar .links li a:focus{
+.navbar .links li a:hover{
     color: rgb(33, 220, 245);
+}
+
+.navbar .links li a:focus{
+    color: rgb(255, 170, 50);
 }
