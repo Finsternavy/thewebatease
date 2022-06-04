@@ -1,3 +1,24 @@
+.footer .socials{
+    display: flex;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    padding: 0;
+}
+.footer i{
+    font-size: 3rem;
+    padding-inline: 10px;
+    color: rgb(255, 170, 50);
+    width: 100%;
+}
+.footer i:hover,
+.footer i:focus{
+    font-size: 3.2rem;
+    color: rgb(33, 220, 245);
+}
 .footer h3{
-    color: blue;
+    color: rgb(33, 220, 245);
 }
