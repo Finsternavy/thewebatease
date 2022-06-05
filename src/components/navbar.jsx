@@ -1,17 +1,15 @@
 // add CSS to your component
 import './navbar.css';
-import { Link } from 'react-router-dom'
-
-// components must return something.  It can only return one parent
-// Don't forget to export at the end
-// Don't forget to import where you want to use it
+import { Link } from 'react-router-dom';
 
 function Navbar(){
     return (
         <nav className="navbar">
             <div className="left">
-                <h1>The Web At Ease</h1>
-                <ul className="links">
+                <div className="img-container">
+                    <img className='logo' src="./img/logo3_NO_BG.png" alt="logo"/>
+                </div>
+                <ul className="links-left">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -21,17 +19,21 @@ function Navbar(){
                     <li>
                         <Link to="/catalog">Catalog</Link>
                     </li>
+                    
+                </ul>
+            </div>
+            <div className="search">
+                <input type="search" />
+                <button className="search-btn">Search</button>
+            </div>
+            <div className="right">
+
+                <ul className='links-right'>
                     <li>
-                        <Link to="/cart">Cart</Link>
+                        <Link to="/cart"><i className="fa-solid fa-cart-shopping"></i></Link>
                     </li>
                 </ul>
             </div>
-            <div className="right">
-                <input type="search" placeholder='Search' />
-                <button className="search-btn">Search</button>
-            </div>
-            
-            
         </nav>
     );
 }

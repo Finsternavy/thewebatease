@@ -1,3 +1,6 @@
+.footer{
+    text-align: center;
+}
 .footer .socials{
     display: flex;
     width: 200px;
@@ -12,11 +15,14 @@
     padding-inline: 10px;
     color: rgb(255, 170, 50);
     width: 100%;
+    transform: scale(1);
+    transition: transform .3s ease;
 }
 .footer i:hover,
 .footer i:focus{
     font-size: 3.2rem;
     color: rgb(33, 220, 245);
+    transform: scale(1.2);
 }
 .footer h3{
     color: rgb(33, 220, 245);

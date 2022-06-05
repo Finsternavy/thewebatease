@@ -5,7 +5,7 @@ import About from './components/about';
 import Cart from './components/cart';
 import Footer from './components/footer';
 import Catalog from './components/catalog';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
