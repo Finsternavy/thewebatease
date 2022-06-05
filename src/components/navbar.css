@@ -1,3 +1,46 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: left;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(25, 25, 25);
+}
+.navbar .left,
+.navbar .right{
+    display: flex;
+    align-items: center;
+    margin-inline: 20px;
+}
+.navbar > *{
+    margin-left: 10px;
+}
+
 .navbar h1{
-    color: red;
+    color: rgb(255, 170, 50);
+    
+}
+.navbar .links{
+    display: flex;
+    list-style: none;
+    color: white;
+}
+.navbar .links li a{
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.navbar .links li a:visited{
+    color: white;
+    text-decoration: none;
+}
+.navbar .links li a:hover{
+    color: rgb(33, 220, 245);
+}
+
+.navbar .links li a:focus{
+    color: rgb(255, 170, 50);
 }

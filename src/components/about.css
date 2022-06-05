@@ -1,0 +1,10 @@
+.about{
+    color: white;
+    width: calc(100vw - 40px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.about .email{
+    color: rgb(255, 170, 50);
+}
