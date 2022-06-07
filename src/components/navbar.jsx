@@ -24,7 +24,7 @@ function Navbar(){
             </div>
             <div className="search">
                 <input type="search" />
-                <button className="search-btn">Search</button>
+                <button className="search-btn"><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="right">
 

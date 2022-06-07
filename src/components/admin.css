@@ -11,7 +11,6 @@
 .admin .content .admin-form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-right: 3px solid gray;
 }
@@ -47,8 +46,20 @@
 }
 
 /*-----------Coupon Section---------*/
-
+.admin .coupons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.admin .coupons h4{
+    width: calc(100% - 120px);
+    min-height: 30px;
+    text-align: center;
+    margin-block: 10px;
+}
 .admin .coupons .coupon-container{
+    margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,4 +76,7 @@
 }
 .admin .coupons .coupon-container .apply-discount-btn:hover{
     background-color: rgb(33, 220, 245);
+}
+.admin ul{
+    padding: 0;
 }

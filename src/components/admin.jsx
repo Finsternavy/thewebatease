@@ -77,7 +77,6 @@ const Admin = () => {
                 <div className="coupon-container">
                     <input name="code" onChange={couponChange} type="text" placeholder='Enter Coupon Code'/>
                     <input name="discount" onChange={couponChange} type="text" placeholder='Enter Discount %'/>
-                    <label>No Discount Applied</label>
                     <button onClick={saveCoupon} className="apply-discount-btn">Apply Discount</button>
                 </div>
 

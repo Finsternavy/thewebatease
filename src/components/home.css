@@ -1,50 +1,87 @@
 
 .home{
     display: flex;
+    flex-direction: column;
+}
+.home > * {
+}
+.home .hero-animation{
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 0;
+    margin-block: 100px;
     min-height: 150px;
 }
-.home > * {
+.home .hero-animation > * {
     flex: 1;
-    width: 50%;
 }
 .home .prefix-container{
-    padding-right: 20px;
     border-right: 3px solid rgb(255, 170, 50);
     margin: 0;
     padding-right: 20px;
+    animation: borderColorShift 15s infinite;
 }
-.home .prefix-container .banner-prefix{
+.home .prefix-container .banner-prefix
+{
     font-size: 3rem;
     text-align: right;
 }
-.home .site-name .banner{
+.home .site-name{
+    margin: 0;
     padding-left: 20px;
+}
+.home .site-name .banner{
     font-size: 3rem;
     text-align: left;
+    animation: colorShift 15s infinite;
 }
 
 .home .prefix-container h1:before{
     content: 'Your Mind';
     margin: 0;
     animation-name: textRotate;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     opacity: 0;
 }
 @keyframes textRotate{
-    0% {opacity:0; content: "Your Mind";}
+    0% {opacity:0; content: "Your Mind"; color: rgb(200, 200, 200);}
     16% {opacity: 1; content: "Your Mind";}
     33% {opacity: 0; content: "Your Mind";}
     34% {content: "Your Business";}
     48% {opacity: 1; content: "Your Business";}
     66% {opacity: 0; content: "Your Business";}
-    67% {content: "The Web";}
-    80% {opacity: 1; content: "The Web";}
-    99% {opacity: 0;content: "The Web";}
-    100% {content: "The Web";}
-
+    67% {content: "The Web"; color: rgb(200, 200, 200);}
+    80% {opacity: 1; content: "The Web"; color: rgb(255, 170, 50);}
+    100% {opacity: 0;content: "The Web";}
+}
+@keyframes colorShift{
+    0% {color: rgb(200, 200, 200);}
+    67% {color: rgb(200, 200, 200);}
+    80% {color: rgb(255, 170, 50)}
+    100% {color: rgb(200, 200, 200);}
+}
+@keyframes borderColorShift{
+    0% {border-color: rgb(255, 170, 50);}
+    67% {border-color: rgb(255, 170, 50);}
+    80% {border-color: rgb(33, 220, 245);}
+    100% {border-color: rgb(255, 170, 50);}
+}
+.home .mission-statement-container{
+    width: 100%;
+    background-color: rgb(255, 170, 50);
+    height: 500px;
+    border-radius: 50% 0 50% 0;
+}
+.home .mission-statement{
+    position: relative;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(30, 30, 30);
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 100px;
 }
