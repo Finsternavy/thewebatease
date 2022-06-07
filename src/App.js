@@ -5,6 +5,7 @@ import About from './components/about';
 import Cart from './components/cart';
 import Footer from './components/footer';
 import Catalog from './components/catalog';
+import Admin from './components/admin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/catalog' element={<Catalog/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/admin' element={<Admin/>}/>
         </Routes>
 
         <Footer/>

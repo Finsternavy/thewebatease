@@ -30,6 +30,9 @@ function Navbar(){
 
                 <ul className='links-right'>
                     <li>
+                        <Link to="/admin">Admin</Link>
+                    </li>
+                    <li>
                         <Link to="/cart"><i className="fa-solid fa-cart-shopping"></i></Link>
                     </li>
                 </ul>
