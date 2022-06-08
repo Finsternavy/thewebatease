@@ -94,7 +94,7 @@
     color: rgb(33, 220, 245);
     letter-spacing: 3px;
     animation-name: expand;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 @keyframes expand{
