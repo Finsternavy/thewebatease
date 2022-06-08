@@ -2,6 +2,8 @@
 .home{
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 .home > * {
 }
@@ -69,19 +71,91 @@
     80% {border-color: rgb(33, 220, 245);}
     100% {border-color: rgb(255, 170, 50);}
 }
-.home .mission-statement-container{
-    width: 100%;
+.home .call-to-action{
+    display: flex;
+    color: rgb(200, 200, 200);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.home .call-to-action > * {
+}
+.home .call-to-action .expand{
+    text-align: right;
+    min-width: 201px;
+}
+.home .call-to-action h3{
+    font-size: 2rem;
+    padding-right: 20px;
+}
+.home .call-to-action h3 span{
+    position: relative;
+    right:0;
+    color: rgb(33, 220, 245);
+    letter-spacing: 3px;
+    animation-name: expand;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes expand{
+    0% {letter-spacing: 3px;}
+    50% {letter-spacing: 10px;}
+    100% {letter-spacing: 3px;}
+}
+.home .call-to-action .get-started-btn{
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-inline: 20px;
+    padding-block: 10px;
+    max-width: 200px;
     background-color: rgb(255, 170, 50);
-    height: 500px;
-    border-radius: 50% 0 50% 0;
+    border-bottom: 3px solid rgb(33, 220, 245);
+    border-radius: 30px;
+    transition: background-color .3s ease;
+}
+.home .call-to-action .get-started-btn,
+.home .call-to-action .get-started-btn:focus,
+.home .call-to-action .get-started-btn:visited{
+    color: rgb(32, 32, 32);
+}
+.home .call-to-action .get-started-btn:hover{
+    background-color: rgb(33, 220, 245);
+}
+.home .mission-statement-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    border-radius: 30% 0 30% 0;
+    border-bottom: 5px solid rgb(255, 170, 50);
+    border-top: 5px solid rgb(33, 220, 245);
 }
 .home .mission-statement{
     position: relative;
-    width: 30%;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(30, 30, 30);
+    color: rgb(200, 200, 200);
     text-align: center;
     font-size: 2rem;
-    padding-top: 100px;
+    padding-inline: 20px;
+    padding-block: 10px;
+}
+.home .mission-statement .stat{
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 3px 3px 3px rgb(32, 32, 32);
+    color: rgb(255, 170, 50);
+}
+.home .mission-statement-container .why-important{
+    color: rgb(255, 170, 50);
+    border-bottom: 3px solid rgb(33, 220, 245);
+}
+.home .mission-statement-container .credit{
+    color: rgb(33, 220, 245);
 }

@@ -60,18 +60,18 @@
     margin-right: auto;
     width: 40px;
     min-height: 35px;
-    animation-name: rotate;
+    /* animation-name: rotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
-@keyframes rotate{
+/* @keyframes rotate{
     0% {width: 40px;}
     40% {width: 40px;}
     50% {width: 0px;}
     60% {width: 40px;}
     100% {width: 40px;}
-}
+} */
 .navbar h1{
     color: rgb(255, 170, 50);
 }

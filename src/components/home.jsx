@@ -1,20 +1,32 @@
 import './home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+
     return(
         <div className="home">
             <div className="hero-animation">
                 <div className="prefix-container">
-                    <h1 className="banner-prefix"></h1>
+                    <h1 className="banner-prefix" aria="The Web At Ease"> </h1>
                 </div>
                 <div className="site-name">
                     <h1 className='banner'>At Ease</h1>
                 </div>
             </div>
+            <div className="call-to-action">
+                <h3 className='expand'><span>EXPAND</span></h3>
+                <h3> your customer base!</h3>
+                <Link className='get-started-btn' to="/catalog">Get Started!</Link>
+            </div>
             <div className="mission-statement-container">
+                <h1>Why is a Website <span className='why-important'>Important?</span></h1>
                 <p className="mission-statement">
-                    Our mission is to provide small business owners a high quality website without breaking the bank
+                    <span className='stat'>76%</span> of people who search for something nearby visit a business within a day. 
                 </p>
+                <p className="mission-statement">
+                    <span className='stat'>28%</span> of searches result in a purchase.
+                </p>
+                <p className='credit'>~Think With Google~</p>
             </div>
         </div>
     );
