@@ -35,7 +35,7 @@ const Cart = () => {
                     </li>))
             }
             <h2>Estimated Total: <span className='grand-total'>${calcGrandTotal().toFixed(2)}</span></h2>
-            
+
             <h3>Request Services</h3>
         </div>
     )
