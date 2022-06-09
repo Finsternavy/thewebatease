@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(30, 30, 30);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 170, 50);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(33, 220, 245);
+  }
+
 
 .home{
     display: flex;
@@ -50,13 +70,13 @@
 }
 @keyframes textRotate{
     0% {opacity:0; content: "Your Mind"; color: rgb(200, 200, 200);}
-    16% {opacity: 1; content: "Your Mind";}
+    16% {opacity: 1;}
     33% {opacity: 0; content: "Your Mind";}
     34% {content: "Your Business";}
-    48% {opacity: 1; content: "Your Business";}
+    48% {opacity: 1;}
     66% {opacity: 0; content: "Your Business";}
     67% {content: "The Web"; color: rgb(200, 200, 200);}
-    80% {opacity: 1; content: "The Web"; color: rgb(255, 170, 50);}
+    80% {opacity: 1; color: rgb(255, 170, 50);}
     100% {opacity: 0;content: "The Web";}
 }
 @keyframes colorShift{
@@ -71,14 +91,18 @@
     80% {border-color: rgb(33, 220, 245);}
     100% {border-color: rgb(255, 170, 50);}
 }
+.home .web-dev-banner{
+    text-align: center;
+    color: rgb(33, 220, 245);
+    margin-top: 20px;
+    font-size: 2rem;
+}
 .home .call-to-action{
     display: flex;
     color: rgb(200, 200, 200);
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-}
-.home .call-to-action > * {
 }
 .home .call-to-action .expand{
     text-align: right;

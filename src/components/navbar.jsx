@@ -1,8 +1,13 @@
 // add CSS to your component
 import './navbar.css';
 import { Link } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import StoreContext from '../context/storeContext'; 
 
 function Navbar(){
+
+    let cart = useContext(StoreContext).cart;
+
     return (
         <nav className="navbar">
             <div className="left">
@@ -33,7 +38,7 @@ function Navbar(){
                         <Link to="/admin">Admin</Link>
                     </li>
                     <li>
-                        <Link to="/cart"><i className="fa-solid fa-cart-shopping"></i></Link>
+                        <Link to="/cart"><span className='cart-qty'>{cart.length}</span><i className="fa-solid fa-cart-shopping"></i></Link>
                     </li>
                 </ul>
             </div>

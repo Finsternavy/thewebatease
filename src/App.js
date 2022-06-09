@@ -7,23 +7,28 @@ import Footer from './components/footer';
 import Catalog from './components/catalog';
 import Admin from './components/admin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import GlobalStoreProvider from './context/globalStoreProvider';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar/>
+      <GlobalStoreProvider>
 
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/catalog' element={<Catalog/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/admin' element={<Admin/>}/>
-        </Routes>
+        <BrowserRouter>
+          <Navbar/>
 
-        <Footer/>
-      </BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/catalog' element={<Catalog/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/admin' element={<Admin/>}/>
+          </Routes>
+
+          <Footer/>
+        </BrowserRouter>
+
+      </GlobalStoreProvider>
     </div>
   );
 }

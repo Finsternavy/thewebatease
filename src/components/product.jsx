@@ -1,10 +1,14 @@
-import { useState} from 'react';
+import { useState, useContext } from 'react';
 import './product.css';
 import QuantityPicker from './quantityPicker';
+import StoreContext from '../context/storeContext';
+
+
 
 const Product = ({data}) => {
 
     let [qty, setQty] = useState(1);
+    let addProdToCart = useContext(StoreContext).addProdToCart;
 
     let onQtyChange = (value)=> {
         // use the value to update the quantityPicker value
@@ -13,6 +17,12 @@ const Product = ({data}) => {
 
     const calcTotal = () => {
         return (data.price * qty).toFixed(2);
+    }
+
+    const addProduct = ()=> {
+        console.log(data.title + " added to cart.");
+        let prodForCart = { ...data, qty:qty };
+        addProdToCart(prodForCart);
     }
 
     return (
@@ -28,9 +38,8 @@ const Product = ({data}) => {
                 </div>
                 <div className="product-controls">
                     <QuantityPicker onChange={onQtyChange}/>
-                    
                 </div>
-                <button className="add-to-cart-btn">Add</button>
+                <button className="add-to-cart-btn" onClick={addProduct}>Add</button>
             </div>
         </div>
     )    

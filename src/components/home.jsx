@@ -5,9 +5,10 @@ const Home = () => {
 
     return(
         <div className="home">
+            <div className="web-dev-banner">At Ease Web Development</div>
             <div className="hero-animation">
                 <div className="prefix-container">
-                    <h1 className="banner-prefix" aria="The Web At Ease"> </h1>
+                    <h1 className="banner-prefix"> </h1>
                 </div>
                 <div className="site-name">
                     <h1 className='banner'>At Ease</h1>
@@ -25,6 +26,9 @@ const Home = () => {
                 </p>
                 <p className="mission-statement">
                     <span className='stat'>28%</span> of searches result in a purchase.
+                </p>
+                <p className="mission-statement">
+                    <span className='stat'>63.6%</span> of consumers say they are likely to check Google reviews before visiting a business location.
                 </p>
                 <p className='credit'>~Think With Google~</p>
             </div>
