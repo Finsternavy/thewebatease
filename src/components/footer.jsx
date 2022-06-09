@@ -10,7 +10,7 @@ function Footer(){
                 <i className="fa-brands fa-linkedin"></i>
             </div>
             
-            <h3>&#169; The Web At Ease, 2022</h3>
+            <h3>&#169; At Ease Web Development, 2022</h3>
         </div>
     );
 }

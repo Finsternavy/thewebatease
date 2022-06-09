@@ -1,4 +1,23 @@
 .cart{
-    color: white;
+    color: rgb(200, 200, 200);
     text-align: center;
+}
+.cart .cart-item{
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cart .cart-item .prod-title{
+    color: rgb(255, 170, 50);
+}
+.cart .cart-item .prod-price{
+    color: rgb(33, 220, 245);
+}
+.cart .grand-total{
+    color: rgb(255, 170, 50);
+    border-bottom: 3px solid rgb(33, 220, 245);
 }

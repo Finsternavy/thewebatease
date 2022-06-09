@@ -12,7 +12,7 @@ function Navbar(){
         <nav className="navbar">
             <div className="left">
                 <div className="img-container">
-                    <img className='logo' src="./img/logo3_NO_BG_gray.png" alt="logo"/>
+                    <img className='logo' src="./img/logo_small.png" alt="logo"/>
                 </div>
                 <ul className="links-left">
                     <li>
@@ -28,8 +28,8 @@ function Navbar(){
                 </ul>
             </div>
             <div className="search">
-                <input type="search" />
-                <button className="search-btn"><i className="fa-solid fa-magnifying-glass"></i></button>
+                <input type="search" for="search"/>
+                <button className="search-btn" aria-label="Search Button"><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className="right">
 
