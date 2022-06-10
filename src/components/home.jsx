@@ -23,16 +23,19 @@ const Home = () => {
                 <h1>Why is a Website <span className='why-important'>Important?</span></h1>
                 <div className="paragraphs">
                     <p className="mission-statement">
-                        <span className='stat'>76%</span> of people who search for something nearby visit a business within a day. 
+                        <span className='stat'>76%</span> of people who search for something nearby visit a business within a day.
+                        <p className='credit'>~Think With Google~</p>
                     </p>
                     <p className="mission-statement">
                         <span className='stat'>28%</span> of searches result in a purchase.
+                        <p className='credit'>~Think With Google~</p>
                     </p>
                     <p className="mission-statement">
-                        <span className='stat'>63.6%</span> of consumers say they are likely to check Google reviews before visiting a business location.
+                        <span className='quotes'>"</span>Having a strong online presence, particularly a website, can be make or break for generating more revenue.<span className='quotes'>"</span>
+                        <p className='credit'>~Forbes.com~</p>
                     </p>
                 </div>
-                    <p className='credit'>~Think With Google~</p>
+                    
             </div>
         </div>
     );

@@ -193,6 +193,9 @@
     text-shadow: 3px 3px 3px rgb(32, 32, 32);
     color: rgb(255, 170, 50);
 }
+.home .mission-statement .quotes{
+    color: rgb(255, 170, 50);
+}
 .home .mission-statement-container .why-important{
     color: rgb(255, 170, 50);
     border-bottom: 3px solid rgb(33, 220, 245);
