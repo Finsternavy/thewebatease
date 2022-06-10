@@ -21,16 +21,18 @@ const Home = () => {
             </div>
             <div className="mission-statement-container">
                 <h1>Why is a Website <span className='why-important'>Important?</span></h1>
-                <p className="mission-statement">
-                    <span className='stat'>76%</span> of people who search for something nearby visit a business within a day. 
-                </p>
-                <p className="mission-statement">
-                    <span className='stat'>28%</span> of searches result in a purchase.
-                </p>
-                <p className="mission-statement">
-                    <span className='stat'>63.6%</span> of consumers say they are likely to check Google reviews before visiting a business location.
-                </p>
-                <p className='credit'>~Think With Google~</p>
+                <div className="paragraphs">
+                    <p className="mission-statement">
+                        <span className='stat'>76%</span> of people who search for something nearby visit a business within a day. 
+                    </p>
+                    <p className="mission-statement">
+                        <span className='stat'>28%</span> of searches result in a purchase.
+                    </p>
+                    <p className="mission-statement">
+                        <span className='stat'>63.6%</span> of consumers say they are likely to check Google reviews before visiting a business location.
+                    </p>
+                </div>
+                    <p className='credit'>~Think With Google~</p>
             </div>
         </div>
     );
