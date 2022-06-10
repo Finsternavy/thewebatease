@@ -1,3 +1,7 @@
+:root{
+    --animation-duration: 10s;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -50,7 +54,7 @@
     border-right: 3px solid rgb(255, 170, 50);
     margin: 0;
     padding-right: 20px;
-    animation: borderColorShift 15s infinite;
+    animation: borderColorShift var(--animation-duration) infinite;
 }
 .home .prefix-container .banner-prefix
 {
@@ -64,14 +68,14 @@
 .home .site-name .banner{
     font-size: 3rem;
     text-align: left;
-    animation: colorShift 15s infinite;
+    animation: colorShift var(--animation-duration) infinite;
 }
 
 .home .prefix-container h1:before{
     content: 'Your Mind';
     margin: 0;
     animation-name: textRotate;
-    animation-duration: 15s;
+    animation-duration: var(--animation-duration);
     animation-iteration-count: infinite;
     opacity: 0;
 }
