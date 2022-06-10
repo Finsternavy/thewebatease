@@ -44,8 +44,7 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    margin-block: 100px;
-    min-height: 150px;
+    min-height: 300px;
 }
 .home .hero-animation > * {
     flex: 1;
@@ -104,10 +103,13 @@
 }
 .home .call-to-action{
     display: flex;
+    flex-wrap: wrap;
     color: rgb(200, 200, 200);
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+}
+.home .call-to-action > * {
 }
 .home .call-to-action .expand{
     text-align: right;
