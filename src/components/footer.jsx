@@ -9,7 +9,7 @@ function Footer(){
                 <i className="fa-brands fa-twitter-square"></i>
                 <i className="fa-brands fa-linkedin"></i>
             </div>
-            
+            <a className='img-credit' href='https://www.freepik.com/vectors/hacker-background'>Hero image created by rawpixel.com - www.freepik.com</a>
             <h3>&#169; At Ease Web Development, 2022</h3>
         </div>
     );

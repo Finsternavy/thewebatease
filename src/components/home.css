@@ -29,6 +29,12 @@
     margin: 0;
     padding: 0;
 }
+.home .hero-img{
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+}
 .home .web-dev-banner{
     text-align: center;
     color: rgb(33, 220, 245);
@@ -161,7 +167,7 @@
     position: relative;
     width: 100%;
     background-color: rgb(50, 50, 50);
-    border-radius: 500px 0 500px 0 / 200px 0 300px 0;
+    border-radius: 500px 0 500px 0 / 150px 0 300px 0;
     border-bottom: 5px solid rgb(255, 170, 50);
     border-top: 5px solid rgb(33, 220, 245);
     padding-block: 100px;
@@ -204,4 +210,12 @@
 }
 .home .mission-statement-container .credit{
     color: rgb(33, 220, 245);
+}
+
+.home .test{
+    min-height: 500px;
+    border-top: 3px solid rgb(33, 220, 245);
+    border-bottom: 3px solid rgb(255, 170, 50);
+    margin-top: 100px;
+    border-radius: 500px 0 500px 0 / 200px 0 200px 0;
 }

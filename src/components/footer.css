@@ -27,3 +27,7 @@
 .footer h3{
     color: rgb(33, 220, 245);
 }
+.footer .img-credit{
+    text-decoration: none;
+    color: rgb(200, 200, 200);
+}

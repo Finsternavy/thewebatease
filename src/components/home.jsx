@@ -5,19 +5,23 @@ const Home = () => {
 
     return(
         <div className="home">
-            <p className="web-dev-banner"><span className='angle-brackets'>{"<"}</span>At Ease Web Development<span className='angle-brackets'>{">"}</span></p>
-            <div className="hero-animation">
-                <div className="prefix-container">
-                    <h1 className="banner-prefix"> </h1>
+            <div className="hero">
+                <img className='hero-img' src="/img/code_floor_tall.jpg" alt="" />
+                <p className="web-dev-banner"><span className='angle-brackets'>{"<"}</span>At Ease Web Development<span className='angle-brackets'>{">"}</span></p>
+                <div className="hero-animation">
+                    <div className="prefix-container">
+                        <h1 className="banner-prefix"> </h1>
+                    </div>
+                    <div className="site-name">
+                        <h1 className='banner'>At Ease</h1>
+                    </div>
                 </div>
-                <div className="site-name">
-                    <h1 className='banner'>At Ease</h1>
+                <div className="call-to-action">
+                    <h3 className='expand'><span>EXPAND</span></h3>
+                    <h3> your customer base!</h3>
+                    <Link className='get-started-btn' to="/catalog">Get Started!</Link>
                 </div>
-            </div>
-            <div className="call-to-action">
-                <h3 className='expand'><span>EXPAND</span></h3>
-                <h3> your customer base!</h3>
-                <Link className='get-started-btn' to="/catalog">Get Started!</Link>
+                
             </div>
             <div className="mission-statement-container">
                 <h1>Why is a Website <span className='why-important'>Important?</span></h1>
@@ -36,6 +40,9 @@ const Home = () => {
                     </p>
                 </div>
                     
+            </div>
+            <div className="test">
+
             </div>
         </div>
     );
