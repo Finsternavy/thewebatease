@@ -1,7 +1,7 @@
 // add CSS to your component
 import './navbar.css';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import StoreContext from '../context/storeContext'; 
 
 function Navbar(){
