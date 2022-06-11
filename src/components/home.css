@@ -128,8 +128,8 @@
 .home .call-to-action h3 span{
     position: relative;
     color: rgb(33, 220, 245);
-    letter-spacing: 3px;
-    animation-name: expand;
+    letter-spacing: 15px;
+    /* animation-name: expand; */
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
