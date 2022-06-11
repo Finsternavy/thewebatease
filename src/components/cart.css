@@ -1,6 +1,17 @@
+.cart-container{
+    display: flex;
+    padding: 20px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .cart{
+    flex: 6;
     color: rgb(200, 200, 200);
     text-align: center;
+}
+.cart-container .order-summary{
+    flex: 2;
 }
 .cart .cart-item{
     list-style: none;
@@ -17,7 +28,15 @@
 .cart .cart-item .prod-price{
     color: rgb(33, 220, 245);
 }
-.cart .grand-total{
+.cart-container .order-summary input{
+    text-align: center;
+    width: 100%;
+}
+.cart-container .estimated-total{
+    margin-top: 50px;
+    color: rgb(200, 200, 200);
+}
+.cart-container .grand-total{
     color: rgb(255, 170, 50);
     border-bottom: 3px solid rgb(33, 220, 245);
 }

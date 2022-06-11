@@ -1,4 +1,6 @@
 import './admin.css';
+import { useContext } from 'react';
+import StoreContext from '../context/storeContext';
 import { useState } from 'react';
 
 const Admin = () => {
@@ -6,6 +8,8 @@ const Admin = () => {
     const [coupon, setCoupon] = useState('');
     const [allCoupons, setAllCoupons] = useState([]);
     const [allProducts, setAllProducts] = useState([]);
+
+    let codes = useContext(StoreContext).discountCodes;
 
     const saveProduct = () => {
         console.log("Saving product", product);
@@ -39,6 +43,10 @@ const Admin = () => {
         let copy = [...allCoupons];
         copy.push(coupon);
         setAllCoupons(copy);
+
+        codes.push(coupon);
+
+        
     }
 
     return (
@@ -83,7 +91,7 @@ const Admin = () => {
                 <ul>
                     <h1>Discount Codes</h1>
                     {
-                        allCoupons.map((coupon) => <li key={coupon.code}>{coupon.code} - {coupon.discount}% Off</li>)
+                        codes.map((coupon) => <li key={coupon.code}>{coupon.code} - {coupon.discount}% Off</li>)
                     }
                 </ul>
             </section>

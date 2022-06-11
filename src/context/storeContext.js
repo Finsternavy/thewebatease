@@ -8,10 +8,13 @@ WILL NOT HOLD ANY IMPLEMENTATION */
 
 let StoreContext = createContext({
     cart: [],
+    discountCodes: [],
     user: {},
 
     addProdToCart: () => {},
-    removeProdFromCart: () => {}
+    removeProdFromCart: () => {},
+    addDiscountCode: () => {},
+    removeDiscountCode: () => {}
 });
 
 export default StoreContext;
