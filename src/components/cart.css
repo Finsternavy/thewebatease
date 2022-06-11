@@ -5,14 +5,20 @@
     margin-left: auto;
     margin-right: auto;
 }
+.cart-container > * {
+    border: 1px solid rgb(200, 200, 200);
+    margin: 10px;
+    border-radius: 20px;
+    position: relative;
+    padding: 30px;
+    background-color: rgb(40, 40, 40);
+}
 .cart{
     flex: 6;
     color: rgb(200, 200, 200);
     text-align: center;
 }
-.cart-container .order-summary{
-    flex: 2;
-}
+
 .cart .cart-item{
     list-style: none;
     font-size: 1.5rem;
@@ -28,15 +34,44 @@
 .cart .cart-item .prod-price{
     color: rgb(33, 220, 245);
 }
+.cart-container .order-summary{
+    flex: 2;
+    color: rgb(200, 200, 200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-container .order-summary > * {
+    width: 90%;
+}
 .cart-container .order-summary input{
     text-align: center;
-    width: 100%;
+}
+.cart-container .order-summary button{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: rgb(255, 170, 50);
+    transition: background-color .3s ease;
+}
+.cart-container .order-summary button:hover,
+.cart-container .order-summary button:focus{
+    background-color: rgb(33, 220, 245);
 }
 .cart-container .estimated-total{
     margin-top: 50px;
     color: rgb(200, 200, 200);
 }
 .cart-container .grand-total{
+    color: rgb(255, 170, 50);
+    border-bottom: 3px solid rgb(33, 220, 245);
+}
+.cart-container .order-summary .dollars{
     color: rgb(255, 170, 50);
     border-bottom: 3px solid rgb(33, 220, 245);
 }

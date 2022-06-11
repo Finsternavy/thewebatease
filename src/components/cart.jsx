@@ -5,7 +5,9 @@ import ProductsInCart from './productsInCart';
 
 const Cart = () => {
     
-    let cart = useContext(StoreContext).cart;
+    let {cart, discountCodes} = useContext(StoreContext);
+    let [code, setCode] = useState('');
+    let [discount, setDiscount] = useState(0);
 
     const calcGrandTotal = () => {
         let total = 0;
@@ -15,6 +17,43 @@ const Cart = () => {
             total += (item.price * item.qty);
         }
         return total;
+    }
+
+    const couponChange = (e) => {
+        let val = e.target.value;
+        console.log(val);
+
+        setCode(val);
+    }
+
+    const applyCode = () => {
+        let found = false;
+        for(let i = 0; i < discountCodes.length; i++){
+            let discountCode = discountCodes[i];
+            if(discountCode.code == code){
+                found = true;
+                setDiscount(discountCode.discount / 100);
+            }
+        }
+
+        if(found){
+            console.log("Code Found!", discount);
+
+        }else{
+            console.log("Invalid code");
+        }
+    }
+
+    const calcDiscountPrice = () => {
+        let price = calcGrandTotal();
+        let newPrice = price - (price * discount);
+        return newPrice;
+    }
+
+    const calcSavings = () => {
+        let price = calcGrandTotal();
+        let savings = price * discount;
+        return savings;
     }
 
     return (
@@ -29,7 +68,11 @@ const Cart = () => {
                 
             <div className='order-summary'>
                 <h2 className='estimated-total'>Estimated Total: <span className='grand-total'>${calcGrandTotal().toFixed(2)}</span></h2>
-                <h3>Request Services</h3>
+                <input name="coupon-code" onChange={couponChange} type="text" placeholder='Enter Discount Code'/>
+                <button className="apply-code" onClick={applyCode}>Apply Code</button>
+                <h3>You saved: <span className='dollars'>${calcSavings().toFixed(2)}</span></h3>
+                <h3>Total: <span className='dollars'>${calcDiscountPrice().toFixed(2)}</span></h3>
+                <button className="pay-btn">Submit Order</button>
             </div>
         </div>
     )

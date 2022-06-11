@@ -45,8 +45,6 @@ const Admin = () => {
         setAllCoupons(copy);
 
         codes.push(coupon);
-
-        
     }
 
     return (
