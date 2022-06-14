@@ -212,10 +212,18 @@
     color: rgb(33, 220, 245);
 }
 
-.home .test{
-    min-height: 500px;
+.home .specialties{
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     border-top: 3px solid rgb(33, 220, 245);
     border-bottom: 3px solid rgb(255, 170, 50);
+    background-color: white;
     margin-top: 100px;
-    border-radius: 500px 0 500px 0 / 200px 0 200px 0;
+    padding-block: 100px;
+}
+.home .specialties .tech-logo{
+    height: 100px;
+    padding: 20px;
 }

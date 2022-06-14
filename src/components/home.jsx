@@ -45,8 +45,15 @@ const Home = () => {
                 </div>
                     
             </div>
-            <div className="test">
-
+            <div className="specialties-container">
+                <div className="specialties">
+                    <img className='tech-logo' src="/img/html_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/css_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/js_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/react_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/python_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/mongodb_logo.png" alt="" />
+                </div>
             </div>
         </div>
     );
