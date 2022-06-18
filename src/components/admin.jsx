@@ -1,7 +1,8 @@
 import './admin.css';
 import { useContext } from 'react';
 import StoreContext from '../context/storeContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import DataService from '../services/dataService';
 
 const Admin = () => {
     const [product, setProduct] = useState({});
@@ -10,6 +11,23 @@ const Admin = () => {
     const [allProducts, setAllProducts] = useState([]);
 
     let codes = useContext(StoreContext).discountCodes;
+
+    const loadCoupons = async() => {
+        let service = new DataService();
+        let data = await service.getCoupons();
+        setAllCoupons(data);
+    };
+
+    const loadCatalog = async() => {
+        let service = new DataService();
+        let data = await service.getCatalog();
+        setAllProducts(data);
+    };
+
+    useEffect(()=>{
+        loadCoupons();
+        loadCatalog();
+    }, []);
 
     const saveProduct = () => {
         console.log("Saving product", product);
@@ -89,7 +107,7 @@ const Admin = () => {
                 <ul>
                     <h1>Discount Codes</h1>
                     {
-                        codes.map((coupon) => <li key={coupon.code}>{coupon.code} - {coupon.discount}% Off</li>)
+                        allCoupons.map((coupon) => <li key={coupon.code}>{coupon.code} - {coupon.discount}% Off</li>)
                     }
                 </ul>
             </section>

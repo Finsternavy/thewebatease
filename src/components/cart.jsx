@@ -1,13 +1,25 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import StoreContext from '../context/storeContext';
 import './cart.css'
 import ProductsInCart from './productsInCart';
+import DataService from '../services/dataService';
 
 const Cart = () => {
-    
-    let {cart, discountCodes} = useContext(StoreContext);
+    let [allCoupons, setAllCoupons] = useState([]);
+    let cart = useContext(StoreContext).cart;
     let [code, setCode] = useState('');
     let [discount, setDiscount] = useState(0);
+
+    const loadCoupons = async() => {
+        let service = new DataService();
+        let data = await service.getCoupons();
+        setAllCoupons(data);
+    };
+
+    useEffect(()=>{
+        loadCoupons();
+    }, []);
+
 
     const calcGrandTotal = () => {
         let total = 0;
@@ -28,8 +40,8 @@ const Cart = () => {
 
     const applyCode = () => {
         let found = false;
-        for(let i = 0; i < discountCodes.length; i++){
-            let discountCode = discountCodes[i];
+        for(let i = 0; i < allCoupons.length; i++){
+            let discountCode = allCoupons[i];
             if(discountCode.code == code){
                 found = true;
                 setDiscount(discountCode.discount / 100);
