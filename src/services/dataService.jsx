@@ -50,6 +50,7 @@ let catalog = [
 ]
 
 class DataService{
+
     async getCatalog(){
         // Retrieve data from the actual server
         let response = await axios.get('http://127.0.0.1:5000/api/catalog');
@@ -66,6 +67,29 @@ class DataService{
         let data = response.data;
 
         return data;
+    }
+
+    axiosConfig = {
+        headers: {
+            'content-type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*",
+        }
+    }
+
+    async postProduct(product){
+        console.log("Attempting to post: ", product);
+
+        await axios.post("http://127.0.0.1:5000/api/catalog", product, this.axiosConfig).then(res =>{
+            console.log(res.data);
+        });
+    }
+
+    async postCoupon(coupon){
+        console.log("Attempting to post: ", coupon);
+
+        await axios.post("http://127.0.0.1:5000/api/coupons", coupon, this.axiosConfig).then(res =>{
+            console.log(res.data);
+        });
     }
 }
 

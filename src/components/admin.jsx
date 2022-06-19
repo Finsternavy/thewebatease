@@ -29,12 +29,19 @@ const Admin = () => {
         loadCatalog();
     }, []);
 
-    const saveProduct = () => {
+    const saveProduct = async () => {
+       
         console.log("Saving product", product);
-        let copy = [...allProducts];
 
+        let service = new DataService();
+        let copy = [...allProducts];
         copy.push(product);
         setAllProducts(copy);
+        let prodCopy = {...product};
+        copy['price'] = prodCopy['price'].toString();
+        setProduct(prodCopy);
+        await service.postProduct(prodCopy);
+        
     }
 
     const prodChange = (e) => {
@@ -42,8 +49,15 @@ const Admin = () => {
         let val = e.target.value;
 
         let copy = {...product};
-        copy[name] = val;
-        setProduct(copy);
+
+        if (name === 'image') {
+            let img = e.target.files[0];
+            copy['image'] = URL.createObjectURL(img);
+            setProduct(copy);
+        }else{
+            copy[name] = val;
+            setProduct(copy);
+        };
     }
 
     const couponChange = (e) => {
@@ -55,14 +69,30 @@ const Admin = () => {
         setCoupon(copy);
     }
 
-    const saveCoupon = () => {
+    const saveCoupon = async () => {
+
+        // console.log("Saving product", product);
+
+        // let service = new DataService();
+        // let copy = [...allProducts];
+        // copy.push(product);
+        // setAllProducts(copy);
+        // let prodCopy = {...product};
+        // copy['price'] = prodCopy['price'].toString();
+        // setProduct(prodCopy);
+        // await service.postProduct(prodCopy);
+
         console.log(coupon);
 
         let copy = [...allCoupons];
         copy.push(coupon);
         setAllCoupons(copy);
-
         codes.push(coupon);
+
+        let service = new DataService();
+        let couponCopy = {...coupon};
+        // couponCopy['discount'] = couponCopy['discount'].toString();
+        await service.postCoupon(couponCopy);
     }
 
     return (
