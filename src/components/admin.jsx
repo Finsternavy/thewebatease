@@ -9,6 +9,7 @@ const Admin = () => {
     const [coupon, setCoupon] = useState('');
     const [allCoupons, setAllCoupons] = useState([]);
     const [allProducts, setAllProducts] = useState([]);
+    const [base64, setBase64] = useState('');
 
     let codes = useContext(StoreContext).discountCodes;
 
@@ -51,9 +52,12 @@ const Admin = () => {
         let copy = {...product};
 
         if (name === 'image') {
-            let img = e.target.files[0];
-            copy['image'] = URL.createObjectURL(img);
-            setProduct(copy);
+            let imageUloaded = () => {
+                let img = e.target.files[0];
+                copy['image'] = URL.createObjectURL(img);
+                setProduct(copy);
+            }
+           
         }else{
             copy[name] = val;
             setProduct(copy);
@@ -91,7 +95,7 @@ const Admin = () => {
 
         let service = new DataService();
         let couponCopy = {...coupon};
-        // couponCopy['discount'] = couponCopy['discount'].toString();
+        couponCopy['discount'] = parseFloat(couponCopy['discount'].toString());
         await service.postCoupon(couponCopy);
     }
 

@@ -46,7 +46,7 @@ const About = () => {
                     "I am <span className='emphasize'>passionate</span> about web development and programming.  I want to use my skills to make a website obtainable for all business owners at a <span className='emphasize'>fair</span> and <span className='emphasize'>reasonable</span> price."
                 </p>
             </div>
-            {getContent()}
+            {/* {getContent()} */}
             <div className="about-content-container">
                 <div className="mission paragraph">
                     <h2 className='header'>OUR MISSION</h2>

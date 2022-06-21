@@ -45,14 +45,17 @@ const Home = () => {
                 </div>
                     
             </div>
+            <div className="tech-header-container">
+                <h1>Our Favorite Technologies</h1>
+            </div>
             <div className="specialties-container">
                 <div className="specialties">
-                    <img className='tech-logo' src="/img/html_logo.png" alt="" />
-                    <img className='tech-logo' src="/img/css_logo.png" alt="" />
-                    <img className='tech-logo' src="/img/js_logo.png" alt="" />
-                    <img className='tech-logo' src="/img/react_logo.png" alt="" />
-                    <img className='tech-logo' src="/img/python_logo.png" alt="" />
-                    <img className='tech-logo' src="/img/mongodb_logo.png" alt="" />
+                    <img className='tech-logo' src="/img/html5.png" alt="" />
+                    <img className='tech-logo' src="/img/css3.png" alt="" />
+                    <img className='tech-logo' src="/img/js.png" alt="" />
+                    <img className='tech-logo' src="/img/react.png" alt="" />
+                    <img className='tech-logo' src="/img/python.png" alt="" />
+                    <img className='tech-logo' src="/img/mongodb.png" alt="" />
                 </div>
             </div>
         </div>

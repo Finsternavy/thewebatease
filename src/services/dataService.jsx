@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 let catalog = [
     {
         _id: "1",
@@ -56,10 +55,7 @@ class DataService{
         let response = await axios.get('http://127.0.0.1:5000/api/catalog');
         let data = response.data;
 
-
         return data;
-
-        // return catalog;
     }
 
     async getCoupons(){
@@ -69,17 +65,10 @@ class DataService{
         return data;
     }
 
-    axiosConfig = {
-        headers: {
-            'content-type': 'application/json;charset=UTF-8',
-            "Access-Control-Allow-Origin": "*",
-        }
-    }
-
     async postProduct(product){
         console.log("Attempting to post: ", product);
 
-        await axios.post("http://127.0.0.1:5000/api/catalog", product, this.axiosConfig).then(res =>{
+        await axios.post("http://127.0.0.1:5000/api/catalog", product).then(res =>{
             console.log(res.data);
         });
     }
@@ -87,7 +76,7 @@ class DataService{
     async postCoupon(coupon){
         console.log("Attempting to post: ", coupon);
 
-        await axios.post("http://127.0.0.1:5000/api/coupons", coupon, this.axiosConfig).then(res =>{
+        await axios.post("http://127.0.0.1:5000/api/coupons", coupon).then(res =>{
             console.log(res.data);
         });
     }

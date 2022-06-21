@@ -83,6 +83,7 @@
 .about .about-content-container{
     display: flex;
     margin-inline: 100px;
+    margin-bottom: 50px;
 }
 .about .paragraph{
     flex: 1;
